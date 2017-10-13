@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Login from './Login'
 import { Redirect } from 'react-router-dom'
+import '../styles/LoginPage.css';
+import sql from '../sql.png'; 
 
 class LoginPage extends Component {
   constructor () {
@@ -37,17 +39,23 @@ class LoginPage extends Component {
     if (isSuccessfulLogin) {
       return (
         <Redirect to={{
-          pathname: '/home',
+          pathname: '/home/er',
           state: { username }
         }}/>
       )
     } else {
       return ( 
+         <div className='Login'>
+          <header className='Login-header'>
+            <img src={sql} />
+            <h1 className='Login-title'>Query Game</h1>
+          </header>
         <Login username={username} password={password} error={error} 
           onUsernameChange={this.onUsernameChange} 
           onPasswordChange={this.onPasswordChange} 
           onLoginSubmit={this.onLoginSubmit}
           />
+          </div>
       )
     }
   }
