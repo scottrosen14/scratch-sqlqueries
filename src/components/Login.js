@@ -7,11 +7,11 @@ class Login extends React.Component{
         return(
         <div>
             <form className='form' onSubmit={e => { onLoginSubmit(); e.preventDefault(); } }>        
-                <input type='text' className="name" placeholder='Enter Username' value={username} onChange={e => onUsernameChange(e.target.value)} ></input>
+                <input type='text' className='name' placeholder='Enter Username' value={username} onChange={e => onUsernameChange(e.target.value)} ></input>
                 <br />
-                <input type='password' className="pass" placeholder='Enter Password' value={password} onChange={e => onPasswordChange(e.target.value)}></input>
+                <input type='password' className='pass' placeholder='Enter Password' value={password} onChange={e => onPasswordChange(e.target.value)}></input>
                 <br />
-                <input className='login' type="submit" value="Login" />
+                <input className='login' type='submit' value='Login' />
                 {error && <p>{error}</p>} 
             </form>
         </div>
