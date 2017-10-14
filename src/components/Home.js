@@ -10,17 +10,22 @@ class Home extends React.Component {
             query: '', 
             result: []
         }
+
+        // it looks like binding with arrow functions in create-react-app (btw. I hate crp!) is not working so we
+        // need to bind our functions here 
+        // there is a better way to create state in homepage and pass it like props here, but .... xD
         this.handleKeyPress = this.handleKeyPress.bind(this)
         this.onQueryChange = this.onQueryChange.bind(this)
-        // this.finalResult = this.finalResult.bind(this)
     }
 
+    // 
     onQueryChange(e) {
         const value = e.target.value;
         this.setState(state => ({ query: value }))
     }
 
     handleKeyPress(e) {
+        // when user press enter after he inserted query in input box he is sending get request to the server and waiting for response
         if (e.key === 'Enter') {
             let xhr = new XMLHttpRequest();
 
@@ -46,6 +51,7 @@ class Home extends React.Component {
         }
     }
     render() {
+        // this is storing results because we're displaying results at the page inside div {resQuery}
         let resQuery=[];
         if(this.state.result.rows !== null && this.state.result.rows !== undefined){
             for(let i=0; i<this.state.result.rows.length; i+=1){
@@ -54,13 +60,11 @@ class Home extends React.Component {
         }
         return (
             <div>
-                Clue 1: Find cities in Europe where country name is Netherlands
+                Clue 1: Find all countries in Europe
                 <br />
-                Clue 2: Find our target country in Europe
+                Clue 2: Find all languages in the Netherlands where the percentage is less than 1
                 <br />
-                Clue 3: Find the only city in Netherlands where its name and district is the same 
-                <br />
-                Clue 4: Find all the languages in the Netherlands where the percentage is less than 1
+                Clue 3: Find cities in Europe where country name is Netherlands 
                 <br />
                 <input type='text' className='queryInput' placeholder='Enter Query' value={this.state.query} onChange={this.onQueryChange} onKeyPress={this.handleKeyPress}></input>
                 <div>

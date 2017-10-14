@@ -1,86 +1,137 @@
 # scratch-sqlqueries
-scratch-project for SQL-based game
-
+​
+## Project Goal
+The attempt of the scratch-sqlqueries repo is to create a more gamified version of the find the robber game found in Unit-10SB-Databases.
+​
+​
+The problem we are addressing is to create an environment where the user can practice SQL queries in an engaging environment where the database is safe from any manipulation aside from Select statements.
+​
+**Workflow**
+​
+A user will be prompted with a login screen that they will need to sign up with a username and password before being able to log in. 
+​
+After logging in the user will be presented with a screen with two tabs. The first tab will display an image of an ER diagram of the databases that are in use. The second tab will display individual tables of the database.
+Universal in both tabs is the query field where a user can input their SQL query.
+​
+​
+## To do List
+[ ] Have a database serving data from a cloud based platform like ElephantSQL.
+​
+Issue: There's a database create on ElephantSQL, but there have been issues with connecting our server with the database.
+-Currently data is able to be served locally and there are instructions below on setup.
+​
+[ ] Postgres ORM file that can serve data automatically to a database
+​
+[ ] Have the GUI table be manipulated based on the query provided
+​
+[ ] Additional pages and components for losing screen
+​
+[ ] Have the timer reset on a successful answer
+​
+[ ] Score and High Score tracking
+​
+[ ] A database for player scores and users
+​
+​
+​
+​
 ## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them
-
+​
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+​
 ```
-Give examples
+git clone https://github.com/SQLit/scratch-sqlqueries.git
 ```
-
+​
 ### Installing
-
+​
 A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+​
+Initial required package build.
+​
 ```
-Give the example
+npm install
 ```
-
-And repeat
-
+Connect to custom server (instead of Create-React-App build).
+​
+*Recommendation use Proxy* 
+​
 ```
-until finished
+npm run build 
+node server/server.js
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+​
+Connecting to PostgreSQL (in terminal)
 ```
-Give an example
+Psql postgress
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
+Create local database
 ```
-Give an example
+postgres=#: create database <name>;
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
+Create User/password
+```
+postgres=#: create user xxx password ‘yyy’;
+```
+Connect to PostgreSQL local database
+```
+\connect <database name>
+```
+Create table (see example)..
+​
+Rest of SQL commands for sample database can be found in `table.sql`
+```
+create table country(
+ code char(3) primary key not null,
+ name text not null,
+ continent text not null,
+ region text not null,
+ population integer not null,
+ capital integer
+);
+```
+-------------
+​
+​
+​
+​
+​
+​
+​
 ## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
+​
+*Frontend*
+- React
+​
+*Backend*
+- Posgres DB
+- Node (Express)
+​
 ## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
+0.1.0
+​
 ## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
+*Initial Team* - [SQLit](https://github.com/SQLit) Team
+​
+Chris Kim - https://github.com/Ckimchris
+​
+Scott Rosen - https://github.com/scottrosen14
+​
+Jelena Gruica - https://github.com/jgruica
+Vincent Vuong - https://github.com/vincevuong
+​
+*Completion Team* - TBD
+​
+​
+​
+​
+See also the list of [contributors](https://github.com/SQLit/scratch-sqlqueries/contributors) who participated in this project.
+​
 ## License
-
+​
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
+​
 ## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+TBD
+​
+​
