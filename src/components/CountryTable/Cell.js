@@ -10,6 +10,7 @@ class Cell extends Component {
   */
 
   render() {
+    console.log('state',this.props.state)
     return (
       <div className="Cell">
         {this.props.state[this.props.rowIndex][this.props.cellIndex]}

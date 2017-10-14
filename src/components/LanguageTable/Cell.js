@@ -15,6 +15,7 @@ class Cell extends Component {
         {this.props.state[this.props.rowIndex][this.props.cellIndex]}
       </div>
     )
+
   }
 }
 
