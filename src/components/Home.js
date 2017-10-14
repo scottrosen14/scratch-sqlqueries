@@ -6,9 +6,9 @@ class Home extends React.Component{
     render(){
         return(
         <div>
-            
+
         <input type='text' className='queryInput' placeholder='Enter Query'></input>
-         
+
         </div>
         )
     }
