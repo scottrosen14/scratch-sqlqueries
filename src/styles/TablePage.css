@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+#TablePage {
+  background-color: blue;
+  box-sizing: border-box;
+  display: block;
+  top: 3px;
+  margin: auto;
+  width: 505px;
+  border-top: 1px solid gray;
+}
+
+h1 {
+  color: gray;
+}
+#data {
+  top: 5px;
+}
+
+.Cell {
+  position: relative;
+  border: 1px solid gray;
+  float: left;
+  height: 20px;
+  width: 100px;
+  background: #fff;
+  /*line-height: 90px;*/
+  font-size: 12px;
+  appearance: none;
+  border-top-width: 0;
+  border-right-width: 0;
+  cursor: pointer;
+}
+
+.Row {
+  width: 100%;
+}
