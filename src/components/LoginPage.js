@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom'
 import '../styles/LoginPage.css';
 import sql from '../sql.png'; 
 
+
+//for login page there is no authentication so you can work on that
 class LoginPage extends Component {
   constructor () {
     super()
@@ -47,7 +49,7 @@ class LoginPage extends Component {
       return ( 
          <div className='Login'>
           <header className='Login-header'>
-            <img src={sql} />
+            <img className='sql' src={sql} />
             <h1 className='Login-title'>Query Game</h1>
           </header>
         <Login username={username} password={password} error={error} 

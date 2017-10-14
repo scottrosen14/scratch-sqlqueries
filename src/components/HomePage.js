@@ -9,6 +9,7 @@ import Home from './Home'
 import '../styles/HomePage.css';
 
 class HomePage extends Component {
+  // because home page contains er, tables and home component we're linking thoose first two in navigatio
   render() {
     return (
       <div className='HomePage'>
