@@ -14,7 +14,6 @@ class Row extends Component {
     for (let i = 0; i < 5; i++) {
       let cell = <Cell key= {i} state={this.props.state} rowIndex={this.props.rowIndex} cellIndex={i}/>
       row.push(cell)
-      console.log('cellIndex', this.props.rowIndex * 5 + i)
     }
     return (
       <div className="Row">

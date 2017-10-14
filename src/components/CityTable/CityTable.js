@@ -16,6 +16,7 @@ class CityTable extends Component {
     };
     /* Displayed hardcoded empty new rows to show idea of full table
       ** Delete empty rows once database is connected to dynamically generate rows based on Database entries
+      this.state.length includes empty rows
     */
     for (let i = 6; i < this.state.length; i++) {
       this.state[i] = [];
@@ -27,7 +28,6 @@ class CityTable extends Component {
       let row = <Row key= {i} rowIndex= {i} state={this.state}/>
       cityTable.push(row);
     }
-    console.log('cityTable------', cityTable)
 
     // display the cityTable within the div container
     return (

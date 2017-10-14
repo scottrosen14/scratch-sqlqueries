@@ -21,6 +21,7 @@ class LanguageTable extends Component {
     };
     /* Displayed hardcoded empty new rows to show idea of full table
       ** Delete empty rows once database is connected to dynamically generate rows based on Database entries
+      this.state.length includes empty rows
     */
     for (let i = 11; i < this.state.length; i++) {
       this.state[i] = [];
@@ -32,7 +33,6 @@ class LanguageTable extends Component {
       let row = <Row key= {i} rowIndex= {i} state={this.state}/>
       languageTable.push(row);
     }
-    console.log('languageTable------', languageTable)
 
     // display the LanguageTable within the div container
     return (
