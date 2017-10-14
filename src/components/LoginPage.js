@@ -47,7 +47,7 @@ class LoginPage extends Component {
       return ( 
          <div className='Login'>
           <header className='Login-header'>
-            <img src={sql} />
+            <img className='sql' src={sql} />
             <h1 className='Login-title'>Query Game</h1>
           </header>
         <Login username={username} password={password} error={error} 

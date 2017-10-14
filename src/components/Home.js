@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import '../styles/Home.css';
+import Timer from './Timer';
 
 class Home extends React.Component {
     constructor() {
@@ -53,10 +54,20 @@ class Home extends React.Component {
         }
         return (
             <div>
+                Clue 1: Find cities in Europe where country name is Netherlands
+                <br />
+                Clue 2: Find our target country in Europe
+                <br />
+                Clue 3: Find the only city in Netherlands where its name and district is the same 
+                <br />
+                Clue 4: Find all the languages in the Netherlands where the percentage is less than 1
+                <br />
                 <input type='text' className='queryInput' placeholder='Enter Query' value={this.state.query} onChange={this.onQueryChange} onKeyPress={this.handleKeyPress}></input>
                 <div>
                     {resQuery}
                 </div>
+                <br />
+                <Timer/>
             </div>
         )
     }

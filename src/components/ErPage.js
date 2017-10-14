@@ -6,7 +6,7 @@ class ErPage extends Component {
   render() {
       return (
         <div>
-        <p>ER</p>
+        <h1 className='erTitle'>Entity relationship diagram</h1>
         <img src={er} />
         </div>
       )
