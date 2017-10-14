@@ -4,6 +4,8 @@ import { Redirect } from 'react-router-dom'
 import '../styles/LoginPage.css';
 import sql from '../sql.png'; 
 
+
+//for login page there is no authentication so you can work on that
 class LoginPage extends Component {
   constructor () {
     super()

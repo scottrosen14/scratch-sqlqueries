@@ -48,24 +48,15 @@ INSERT INTO countrylanguage VALUES ('NLD','Fries','F',3.7);
 INSERT INTO countrylanguage VALUES ('NLD','Turkish','F',0.8);
 
 
-FIRST CLUE ====>
-Find cities in Europe where country name is Netherlands
-OUERY ====>
+
+---> select country from europe where 
+1. Find all countries in Europe
+select country.name from country where continent='Europe';
+2. Find all languages in the Netherlands where the percentage is less than 1
+select countrylanguage.language from countrylanguage inner join country on country.code = countrylanguage.countrycode where country.name = 'Netherlands' and percentage<1;
+3. Find cities in Europe where country name is Netherlands
 select city.name from city inner join country on city.countrycode = country.code where country.name = 'Netherlands';
 
-SECOND CLUE ====>
-Find our target country in Europe
-QUERY ====>
-select country.name from country where region = 'Europe';
 
-THIRD CLUE ====>
-Find the only city in Netherlands where its name and district is the same 
-QUERY ====>
-select city.name from city where where region = 'Europe' and name = district
-
-FOURTH CLUE ====>
-Find all the languages in the Netherlands where the percentage is less than 1
-QUERY ====>
-select countrylanguage.language from countrylanguage where percentage < 1
 
 
