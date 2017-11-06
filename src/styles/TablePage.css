@@ -3,30 +3,45 @@
 }
 
 #TablePage {
-  background-color: blue;
   box-sizing: border-box;
   display: block;
   top: 3px;
   margin: auto;
-  width: 505px;
-  border-top: 1px solid gray;
+}
+
+#CityTable {
+  /* must make width proportional to cell width
+  ex. 5 cells in a row means the width should be 5 times the cell width*/
+  background-color: blue;
+  width: 500px;
+  margin: auto;
+}
+
+#LanguageTable {
+  /* must make width proportional to cell width*/
+  background-color: blue;
+  width: 400px;
+  margin: auto;
+}
+
+#CountryTable {
+  /* must make width proportional to cell width*/
+  background-color: blue;
+  width: 600px;
+  margin: auto;
 }
 
 h1 {
-  color: gray;
-}
-#data {
-  top: 5px;
+  color: #ccc;
 }
 
 .Cell {
   position: relative;
   border: 1px solid gray;
   float: left;
-  height: 20px;
+  height: 30px;
   width: 100px;
   background: #fff;
-  /*line-height: 90px;*/
   font-size: 12px;
   appearance: none;
   border-top-width: 0;
