@@ -25,6 +25,7 @@ class HomePage extends Component {
           <Route exact path='/home/countrytable' component={CountryTable} />
           <Route exact path='/home/languagetable' component={LanguageTable} />
           <Route exact path='/home/er' component={ErPage} />
+          <Home/>
       </div>
     )
   }
